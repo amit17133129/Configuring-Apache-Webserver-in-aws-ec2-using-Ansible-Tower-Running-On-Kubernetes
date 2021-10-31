@@ -1,12 +1,10 @@
-- hosts: "ec2-65-2-35-28.ap-south-1.compute.amazonaws.com"
+- hosts: "ec2-13-234-238-129.ap-south-1.compute.amazonaws.com"
   tasks:
-    - name: "updating apt"
-      apt: update_cache=yes  
       
-    - name: "installing nginx"
+    - name: "installing httpd"
       apt: 
-        name: "apache2"
-        state: absent
+        name: "httpd"
+        state: present
         
     - name: "copying content to /var/www/html/"
       copy: 
@@ -15,6 +13,6 @@
         
     - name: "starting nginx server"
       service:
-         name: "apache2"
+         name: "httpd"
          state: restarted
          
