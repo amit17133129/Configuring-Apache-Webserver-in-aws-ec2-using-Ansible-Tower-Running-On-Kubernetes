@@ -1,4 +1,4 @@
-- hosts:
+- hosts: localhost
   vars: 
    # vars file for ec2_launch
    aws_access_key: 'enter your access key'
