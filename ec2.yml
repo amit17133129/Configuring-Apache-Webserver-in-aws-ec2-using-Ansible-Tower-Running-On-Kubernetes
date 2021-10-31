@@ -1,8 +1,8 @@
 - hosts: localhost
   vars: 
    # vars file for ec2_launch
-   aws_access_key: 'AKIAWTVT3K2VJPDZ7MWQ'
-   aws_secret_key: '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'
+   aws_access_key: ''
+   aws_secret_key: ''
    vpc_title: 'Nginx_Server'
    vpc_name: "{{ vpc_title }} VPC"
    igw_name: "{{ vpc_title }} IGW"
