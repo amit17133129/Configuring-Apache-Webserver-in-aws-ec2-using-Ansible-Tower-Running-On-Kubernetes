@@ -1,5 +1,5 @@
 
-- hosts: "ec2-13-234-238-129.ap-south-1.compute.amazonaws.com"
+- hosts: "ec2-54-190-51-52.us-west-2.compute.amazonaws.com"
   tasks:
       
     - name: "installing httpd"
