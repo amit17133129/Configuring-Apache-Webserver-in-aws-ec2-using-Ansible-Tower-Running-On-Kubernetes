@@ -5,16 +5,16 @@
       
     - name: "installing nginx"
       apt: 
-        name: "nginx"
-        state: latest
+        name: "apache2"
+        state: absent
         
-    - name: "copying content to /usr/share/nginx/html/index.html"
+    - name: "copying content to /var/www/html/"
       copy: 
         content: "Hello Ansible Tower"
-        dest: "/usr/share/nginx/html/index.html"
+        dest: "/var/www/html/ansible-tower.html"
         
     - name: "starting nginx server"
       service:
-         name: "nginx"
+         name: "apache2"
          state: restarted
          
