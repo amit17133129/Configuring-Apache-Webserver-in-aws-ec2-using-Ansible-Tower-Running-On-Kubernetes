@@ -1,4 +1,4 @@
-- hosts: "ec2-35-154-42-175.ap-south-1.compute.amazonaws.com"
+- hosts: "ec2-65-2-35-28.ap-south-1.compute.amazonaws.com"
   tasks:
     - name: "updating apt"
       apt: update_cache=yes  
