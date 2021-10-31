@@ -1,0 +1,16 @@
+- hosts: "ec2-35-154-42-175.ap-south-1.compute.amazonaws.com"
+  tasks:
+    - name: "installing nginx"
+      apt: 
+        name: "nginx"
+        state: present
+    - name: "copying content to /usr/share/nginx/html/index.html"
+      copy: 
+        content: "Hello Ansible Tower"
+        dest: "/usr/share/nginx/html/index.html"
+        
+    - name: "starting nginx server"
+      service:
+         name: "nginx"
+         state: restarted
+         
