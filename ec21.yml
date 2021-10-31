@@ -20,7 +20,7 @@
   tasks:
       
     - name: "installing httpd"
-      apt: 
+      yum: 
         name: "httpd"
         state: present
          
