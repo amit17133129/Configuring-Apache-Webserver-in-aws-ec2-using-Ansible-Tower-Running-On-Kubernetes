@@ -5,7 +5,7 @@
       apt: 
         name: "apache2"
         state: present
-        
+         
     - name: "copying content to /var/www/html/"
       copy: 
         content: "Hello Ansible Tower"
