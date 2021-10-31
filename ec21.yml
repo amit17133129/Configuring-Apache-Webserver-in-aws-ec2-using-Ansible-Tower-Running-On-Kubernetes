@@ -1,9 +1,13 @@
 - hosts: "ec2-35-154-42-175.ap-south-1.compute.amazonaws.com"
   tasks:
+    - name: "updating apt"
+      apt: update_cache=yes  
+      
     - name: "installing nginx"
       apt: 
         name: "nginx"
-        state: present
+        state: latest
+        
     - name: "copying content to /usr/share/nginx/html/index.html"
       copy: 
         content: "Hello Ansible Tower"
