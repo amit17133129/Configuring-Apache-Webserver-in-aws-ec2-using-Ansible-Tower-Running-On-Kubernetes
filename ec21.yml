@@ -6,15 +6,15 @@
     - name: "installing nginx"
       apt: 
         name: "nginx"
-        state: absent
+        state: latest
         
-#     - name: "copying content to /usr/share/nginx/html/index.html"
-#       copy: 
-#         content: "Hello Ansible Tower"
-#         dest: "/usr/share/nginx/html/index.html"
+    - name: "copying content to /usr/share/nginx/html/index.html"
+      copy: 
+        content: "Hello Ansible Tower"
+        dest: "/usr/share/nginx/html/index.html"
         
-#     - name: "starting nginx server"
-#       service:
-#          name: "nginx"
-#          state: restarted
+    - name: "starting nginx server"
+      service:
+         name: "nginx"
+         state: restarted
          
