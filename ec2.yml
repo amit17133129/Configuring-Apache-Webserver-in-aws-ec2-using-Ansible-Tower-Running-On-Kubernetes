@@ -38,7 +38,7 @@
     register: ec2_vpc_net_result
   - name: create ec2 vpc internet gateway
     # create an internet gateway for the vpc
-    ec2_vpc_igw:
+    community.aws.ec2_vpc_igw:
       aws_access_key: "{{ aws_access_key }}"
       aws_secret_key: "{{ aws_secret_key }}"
       vpc_id: "{{ ec2_vpc_net_result.vpc.id }}"
