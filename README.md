@@ -240,7 +240,7 @@ After creating a job template, you need to launch the job template i.e you need 
 
 
 <p align="center">
-  <img width="1000" height="500" src="https://miro.medium.com/max/1167/1*a_2Wlws_aFS9G2SvxX7A8Q.gif">
+  <img width="1000" height="500" src="https://github.com/amit17133129/Configuring-Apache-Webserver-in-aws-ec2-using-Ansible-Tower-Running-On-Kubernetes/blob/main/final.gif?raw=true">
 </p>
 
 This is the basic playbook of configuring of apache webserver by installing apache(httpd) and the copying the content in /var/www/html location and then restarting apache server.
