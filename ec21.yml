@@ -1,27 +1,9 @@
-# - hosts: "ec2-35-154-39-123.ap-south-1.compute.amazonaws.com"
-#   tasks:
-      
-#     - name: "installing apache2"
-#       apt: 
-#         name: "apache2"
-#         state: present
-         
-#     - name: "copying content to /var/www/html/"
-#       copy: 
-#         content: "Hello Ansible Tower"
-#         dest: "/var/www/html/ansible-tower.html"
-        
-#     - name: "starting nginx server"
-#       service:
-#          name: "apache2"
-#          state: restarted
-         
-- hosts: "ec2-13-234-238-129.ap-south-1.compute.amazonaws.com"
+- hosts: "ec2-35-154-39-123.ap-south-1.compute.amazonaws.com"
   tasks:
       
-    - name: "installing httpd"
+    - name: "installing apache2"
       apt: 
-        name: "httpd"
+        name: "apache2"
         state: present
          
     - name: "copying content to /var/www/html/"
@@ -31,5 +13,23 @@
         
     - name: "starting nginx server"
       service:
-         name: "httpd"
+         name: "apache2"
          state: restarted
+         
+# - hosts: "ec2-13-234-238-129.ap-south-1.compute.amazonaws.com"
+#   tasks:
+      
+#     - name: "installing httpd"
+#       apt: 
+#         name: "httpd"
+#         state: present
+         
+#     - name: "copying content to /var/www/html/"
+#       copy: 
+#         content: "Hello Ansible Tower"
+#         dest: "/var/www/html/ansible-tower.html"
+        
+#     - name: "starting nginx server"
+#       service:
+#          name: "httpd"
+#          state: restarted
