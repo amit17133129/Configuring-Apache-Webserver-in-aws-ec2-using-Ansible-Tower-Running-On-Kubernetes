@@ -29,7 +29,7 @@ Minikube is a lightweight Kubernetes implementation that creates a VM on your lo
 
 ```
 # minikube installation link
-curl -Lo minikube https://github.com/kubernetes/minikube/releases/download/v1.21.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/sudo 
+curl -Lo minikube https://github.com/kubernetes/minikube/releases/download/v1.21.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/ 
 #modfying docker user
 usermod -aG docker $USER
 #Checking groups
@@ -46,7 +46,10 @@ The Kubernetes command-line tool, kubectl, allows you to run commands against Ku
 
 ```
 # Kubectl installation link
-curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectlchmod +x ./kubectl
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+
+chmod +x ./kubectl
+
 # moving ./kubectl to /usr/local/bin/kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 # Checking client version
